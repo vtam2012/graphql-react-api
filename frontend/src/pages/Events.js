@@ -107,15 +107,17 @@ class EventsPage extends Component {
         this.setState({ isLoading: true });
         const requestBody = {
             query: `
-                events {
-                    _id
-                    title
-                    description
-                    date
-                    price
-                    creator {
+                query {
+                    events {
                         _id
-                        email
+                        title
+                        description
+                        date
+                        price
+                        creator {
+                            _id
+                            email
+                        }
                     }
                 }
             `
@@ -125,7 +127,7 @@ class EventsPage extends Component {
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json'
         }
         }).then(res => {
             if (res.status !== 200 && res.status !== 201) {
@@ -254,7 +256,6 @@ class EventsPage extends Component {
                         authUserId={this.context.userId} 
                         onViewDetail={this.showDetailHandler}
                 />}
-                
             </React.Fragment>
         );
     }
