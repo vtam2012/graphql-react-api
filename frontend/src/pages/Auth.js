@@ -6,7 +6,9 @@ class AuthPage extends Component {
     state = {
         isLogin: true
     };
+
     static contextType = AuthContext;
+
     constructor(props) {
         super(props);
         this.emailEl = React.createRef();
