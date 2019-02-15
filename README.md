@@ -13,7 +13,7 @@ A GraphQL API
 
 1) In graphql-react-api folder(root directory), run "npm install"
 
-2) Create an account on [MongoDB Atlas] (https://www.mongodb.com/cloud/atlas)
+2) Create an account on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
 3) Follow instructions on MongoDB to create a cluster
 
