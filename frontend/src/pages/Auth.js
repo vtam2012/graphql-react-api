@@ -42,7 +42,7 @@ class AuthPage extends Component {
             `,
             variables: {
                 email: email,
-                pasword: password
+                password: password
             }
         };
         

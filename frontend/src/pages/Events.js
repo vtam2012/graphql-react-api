@@ -227,7 +227,7 @@ class EventsPage extends Component {
                                 <input type="text" id="title" ref={this.titleElRef} /> 
                             </div>
                             <div className="form-control">
-                                <label htmFor="price">Price</label>
+                                <label htmlFor="price">Price</label>
                                 <input type="number" id="price" ref={this.priceElRef} />
                             </div>
                             <div className="form-control">
@@ -235,7 +235,7 @@ class EventsPage extends Component {
                                 <input type="datetime-local" id="date" ref={this.dateElRef} />
                             </div>
                             <div className="form-control">
-                                <label htmFor="description">Description</label>
+                                <label htmlFor="description">Description</label>
                                 <textarea id="description" rows="4" ref={this.descriptionElRef} />
                             </div>
                         </form>
