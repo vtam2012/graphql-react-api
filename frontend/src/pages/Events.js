@@ -223,7 +223,7 @@ class EventsPage extends Component {
                     >
                         <form>
                             <div className="form-control">
-                                <label htmFor="title">Title</label>
+                                <label htmlFor="title">Title</label>
                                 <input type="text" id="title" ref={this.titleElRef} /> 
                             </div>
                             <div className="form-control">
