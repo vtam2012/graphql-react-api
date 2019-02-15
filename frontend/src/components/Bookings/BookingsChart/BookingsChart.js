@@ -44,7 +44,11 @@ const bookingsChart = (props) => {
         values = [...values];
         values[values.length - 1] = 0;
     }
-    return <div style={{textAlign: 'center'}}><BarChart data={chartData} /> </div>
+    return (
+        <div style={{textAlign: 'center'}}>
+            <BarChart data={chartData} /> 
+        </div>
+    );
 }
 
 export default bookingsChart;

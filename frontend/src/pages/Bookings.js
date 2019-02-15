@@ -20,14 +20,14 @@ class BookingsPage extends Component {
     }
 
     fetchBookings = () => {
-        this.setState({isLoading: true});
+        this.setState({ isLoading: true });
         const requestBody = {
             query: `
                 query {
                     bookings {
                         _id
                         createdAt
-                        event{
+                        event {
                             _id
                             title
                             date
@@ -43,7 +43,7 @@ class BookingsPage extends Component {
             body: JSON.stringify(requestBody),
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + this.context.token
+                Authorization: 'Bearer ' + this.context.token
             }
         }).then(res => {
             if (res.status !== 200 && res.status !== 201) {
@@ -53,7 +53,7 @@ class BookingsPage extends Component {
         })
         .then(resData => {
             const bookings = resData.data.bookings;
-            this.setState({bookings: bookings, isLoading: false});
+            this.setState({ bookings: bookings, isLoading: false});
         })
         .catch(err => {
             console.log(err); 
@@ -62,7 +62,7 @@ class BookingsPage extends Component {
     };
 
     deleteBookingHandler = (bookingId) => {
-        this.setState({isLoading: true});
+        this.setState({ isLoading: true });
         const requestBody = {
             query: `
                 mutation CancelBooking($id: ID!) {
@@ -82,7 +82,7 @@ class BookingsPage extends Component {
             body: JSON.stringify(requestBody),
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + this.context.token
+                Authorization: 'Bearer ' + this.context.token
             }
         }).then(res => {
             if (res.status !== 200 && res.status !== 201) {
@@ -102,7 +102,7 @@ class BookingsPage extends Component {
             console.log(err); 
             this.setState({ isLoading: false });
         });
-    }
+    };
 
     changeOutputTypeHandler = (outputType) => {
         if (outputType === 'list'){
@@ -113,8 +113,8 @@ class BookingsPage extends Component {
     }
 
     render(){
-        let content = <Spinner />
-        if(this.state.isLoading){
+        let content = <Spinner />;
+        if(!this.state.isLoading) {
             content = (
                 <React.Fragment>
                     <BookingsControls activeOutputType={this.state.outputType} onChange={this.changeOutputTypeHandler} />

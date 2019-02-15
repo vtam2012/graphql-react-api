@@ -15,7 +15,7 @@ class AuthPage extends Component {
         this.passwordEl = React.createRef();
     }
 
-    SwitchModeHandler = () => {
+    switchModeHandler = () => {
         this.setState(prevState => {
             return {isLogin: !prevState.isLogin};
         });
@@ -102,7 +102,7 @@ class AuthPage extends Component {
                 </div>
                 <div className="form-actions">
                     <button type="submit">Submit</button>
-                    <button type="button" onClick={this.SwitchModeHandler}>Switch to {this.state.isLogin ? 'Signup' : 'Login'}</button> 
+                    <button type="button" onClick={this.switchModeHandler}>Switch to {this.state.isLogin ? 'Signup' : 'Login'}</button> 
                 </div>
             </form>
         );

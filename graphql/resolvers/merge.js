@@ -8,7 +8,7 @@ const eventLoader = new DataLoader((eventIds) => {
 });
 
 const userLoader = new DataLoader((userIds) => {
-    return User.find({_id: {$in: userIds}});
+    return User.find({ _id: {$in: userIds} });
 });
 
 const events =  async eventIds => {

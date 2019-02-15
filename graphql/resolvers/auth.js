@@ -6,11 +6,11 @@ module.exports =
 {
     createUser:  async (args) => {
         try {
-            const exisitingUser = await User.findOne({email: args.userInput.email})
+            const exisitingUser = await User.findOne({email: args.userInput.email});
             if (exisitingUser) {
-                throw new Error('User exists already.')
+                throw new Error('User exists already.');
             }
-            const hashedPassword = await bcrypt.hash(args.userInput.password, 12)
+            const hashedPassword = await bcrypt.hash(args.userInput.password, 12);
 
             const user = new User({
                 email: args.userInput.email,

@@ -26,10 +26,10 @@ app.use(isAuth);
 
 app.use('/graphql',
         graphQlHttp({
-        schema: graphQlSchema,
-        rootValue: graphQlResolvers,
-        graphiql: true
-    })
+            schema: graphQlSchema,
+            rootValue: graphQlResolvers,
+            graphiql: true
+        })
 );
 
 mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-cq6up.azure.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`)
