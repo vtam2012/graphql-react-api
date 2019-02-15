@@ -6,26 +6,9 @@ A GraphQL API
 2) run "npm install"
 3) run "npm start"
 
-> note: GraphQL backend powered by MongoDB Atlas (personal database), you must create your own database
-  in order for the full application to work
-
-# Backend Setup
+# Backend 
 
 1) In graphql-react-api folder(root directory), run "npm install"
-
-2) Create an account on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-
-3) Follow instructions on MongoDB to create a cluster
-
-3) Create a MongoDB User with Admin privileges
-
-4) Click Security tab and add your IP address to whitelist
-
-4) edit nodemon.json file with correct environment variables 
-(       "MONGO_USER": "YOUR_USER_NAME_HERE"
-        "MONGO_PASSWORD": "YOUR_PASSWORD_HERE",
-        "MONGO_DB": "NAME_OF_DATABASE_HERE" )
-
-5) run npm start to start server on port 8000
+5) run "npm start" to start server on port 8000
 
 > note: you must run the frontend simultaneously as the backend in order for the application to fully function. (npm start in two separate consoles) Frontend runs on port 3000 while backend runs on port 8000.
